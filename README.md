@@ -84,84 +84,85 @@ Steps to Generate keys.
 
 2. Extract the Key out and give it to the Interface.
 
-    $gpg –armor –output pubkey_teds.txt –export ‘<USER_NAME> (<SOME DESCRIPTION>) <xyg@gmail.com>’
-    $ ls -ltr | tail -1
-    -rw-r–r–   1 tedload  dev            1726 Dec 12 11:21 pubkey_teds.txt
+        $gpg –armor –output pubkey_teds.txt –export ‘<USER_NAME> (<SOME DESCRIPTION>) <xyg@gmail.com>’
+        $ ls -ltr | tail -1
+        -rw-r–r–   1 tedload  dev            1726 Dec 12 11:21 pubkey_teds.txt
 
 
 3. Now deliver the Keys to the Interface so that they can import the Keys in their environment. This can be done offline     
    delivery, so that this key should not get in wrong hands.
 
 4. Next Step to import the public keys from the Interface to import the key and encrypt all files for them.
-      $gpg –import TMpubkey2.key
-      gpg: WARNING: using insecure memory!
-      gpg: please see http://www.gnupg.org/faq.html for more information
-      gpg: key 69975E21: public key “Tescomobile <David.Jukes@Tesco-mobile.com>” imported
-      gpg: Total number processed: 1
-      gpg:               imported: 1
-      $ gpg –list-keys
-      gpg: WARNING: using insecure memory!
-      gpg: please see http://www.gnupg.org/faq.html for more information
-      /home/tedload/.gnupg/pubring.gpg
-      ——————————–
-      pub   1024D/69975E21 2008-06-09
-      uid                  Tescomobile <David.Jukes@Tesco-mobile.com>
-      sub   1024g/305F2D75 2008-06-09
-      $ gpg –edit-key “Tescomobile <David.Jukes@Tesco-mobile.com>” sign
-      gpg (GnuPG) 1.4.10; Copyright (C) 2008 Free Software Foundation, Inc.
-      This is free software: you are free to change and redistribute it.
-      There is NO WARRANTY, to the extent permitted by law.
-      gpg: WARNING: using insecure memory!
-      gpg: please see http://www.gnupg.org/faq.html for more information
-      pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
-                           trust: unknown       validity: unknown
-      sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
-      [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
-      pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
-                           trust: unknown       validity: unknown
-      Primary key fingerprint: 3FEA 392C 2923 51B5 AE15  FE44 8FE2 ECDC 6997 5E21
-           Tescomobile <David.Jukes@Tesco-mobile.com>
-      Are you sure that you want to sign this key with your
-      key “tedload (Teds Dev Box) <tedsupport@o2.com>” (474308C7)
-      Really sign? (y/N) y
-      You need a passphrase to unlock the secret key for
-      user: “tedload (Teds Dev Box) <tedsupport@o2.com>”
-      2048-bit RSA key, ID 474308C7, created 2013-11-25
-      Command> trust
-      pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
-                           trust: unknown       validity: unknown
-      sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
-      [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
-      Please decide how far you trust this user to correctly verify other users’ keys
-      (by looking at passports, checking fingerprints from different sources, etc.)
-        1 = I don’t know or won’t say
-        2 = I do NOT trust
-        3 = I trust marginally
-        4 = I trust fully
-        5 = I trust ultimately
-        m = back to the main menu
-      Your decision? 4
-      pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
-                           trust: full          validity: unknown
-      sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
-      [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
-      Please note that the shown key validity is not necessarily correct
-      unless you restart the program.
+      
+        $gpg –import TMpubkey2.key
+        gpg: WARNING: using insecure memory!
+        gpg: please see http://www.gnupg.org/faq.html for more information
+        gpg: key 69975E21: public key “Tescomobile <David.Jukes@Tesco-mobile.com>” imported
+        gpg: Total number processed: 1
+        gpg:               imported: 1
+        $ gpg –list-keys
+        gpg: WARNING: using insecure memory!
+        gpg: please see http://www.gnupg.org/faq.html for more information
+        /home/tedload/.gnupg/pubring.gpg
+        pub   1024D/69975E21 2008-06-09
+        uid                  Tescomobile <David.Jukes@Tesco-mobile.com>
+        sub   1024g/305F2D75 2008-06-09
+        $ gpg –edit-key “Tescomobile <David.Jukes@Tesco-mobile.com>” sign
+        gpg (GnuPG) 1.4.10; Copyright (C) 2008 Free Software Foundation, Inc.
+        This is free software: you are free to change and redistribute it.
+        There is NO WARRANTY, to the extent permitted by law.
+        gpg: WARNING: using insecure memory!
+        gpg: please see http://www.gnupg.org/faq.html for more information
+        pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
+                             trust: unknown       validity: unknown
+        sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
+        [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
+        pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
+                             trust: unknown       validity: unknown
+        Primary key fingerprint: 3FEA 392C 2923 51B5 AE15  FE44 8FE2 ECDC 6997 5E21
+             Tescomobile <David.Jukes@Tesco-mobile.com>
+        Are you sure that you want to sign this key with your
+        key “tedload (Teds Dev Box) <tedsupport@o2.com>” (474308C7)
+        Really sign? (y/N) y
+        You need a passphrase to unlock the secret key for
+        user: “tedload (Teds Dev Box) <tedsupport@o2.com>”
+        2048-bit RSA key, ID 474308C7, created 2013-11-25
+        Command> trust
+        pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
+                             trust: unknown       validity: unknown
+        sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
+        [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
+        Please decide how far you trust this user to correctly verify other users’ keys
+        (by looking at passports, checking fingerprints from different sources, etc.)
+          1 = I don’t know or won’t say
+          2 = I do NOT trust
+          3 = I trust marginally
+          4 = I trust fully
+          5 = I trust ultimately
+          m = back to the main menu
+        Your decision? 4
+        pub  1024D/69975E21  created: 2008-06-09  expires: never       usage: SC
+                             trust: full          validity: unknown
+        sub  1024g/305F2D75  created: 2008-06-09  expires: never       usage: E
+        [ unknown] (1). Tescomobile <David.Jukes@Tesco-mobile.com>
+        Please note that the shown key validity is not necessarily correct
+        unless you restart the program.
+
 Command> quit
 Save changes? (y/N) y
 
 
 $ gpg –encrypt –batch -r “Tescomobile <XYZ@Tesco-mobile.com>” tm_disc_balance_20131127.psv
-    gpg: WARNING: using insecure memory!
-    gpg: please see http://www.gnupg.org/faq.html for more information
-    gpg: checking the trustdb
-    gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
-    gpg: depth: 0  valid:  12  signed:   1  trust: 0-, 0q, 0n, 0m, 0f, 12u
-    gpg: depth: 1  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 1f, 0u
-    gpg: next trustdb check due at 2014-03-28
+        gpg: WARNING: using insecure memory!
+        gpg: please see http://www.gnupg.org/faq.html for more information
+        gpg: checking the trustdb
+        gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+        gpg: depth: 0  valid:  12  signed:   1  trust: 0-, 0q, 0n, 0m, 0f, 12u
+        gpg: depth: 1  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 1f, 0u
+        gpg: next trustdb check due at 2014-03-28
     
 $ ls –ltr
--rw-r—–   1 tedload  tedliv      7423 Nov 28 15:19 tm_disc_balance_20131127.psv.gpg
+        -rw-r—–   1 tedload  tedliv      7423 Nov 28 15:19 tm_disc_balance_20131127.psv.gpg
 
 This file is ready to share with the exteral interface who can decryp the files with its own provate keys.
 
