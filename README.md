@@ -94,7 +94,9 @@ Steps to Generate keys.
 
 4. Next Step to import the public keys from the Interface to import the key and encrypt all files for them.
       
-        $gpg –import TMpubkey2.key
+$gpg –import TMpubkey2.key
+
+
         gpg: WARNING: using insecure memory!
         gpg: please see http://www.gnupg.org/faq.html for more information
         gpg: key 69975E21: public key “Tescomobile <David.Jukes@Tesco-mobile.com>” imported
@@ -148,11 +150,13 @@ Steps to Generate keys.
         Please note that the shown key validity is not necessarily correct
         unless you restart the program.
 
-Command> quit
-Save changes? (y/N) y
+$Command> quit
+
+$Save changes? (y/N) y
 
 
 $ gpg –encrypt –batch -r “Tescomobile <XYZ@Tesco-mobile.com>” tm_disc_balance_20131127.psv
+
         gpg: WARNING: using insecure memory!
         gpg: please see http://www.gnupg.org/faq.html for more information
         gpg: checking the trustdb
@@ -162,6 +166,7 @@ $ gpg –encrypt –batch -r “Tescomobile <XYZ@Tesco-mobile.com>” tm_disc_ba
         gpg: next trustdb check due at 2014-03-28
     
 $ ls –ltr
+
         -rw-r—–   1 tedload  tedliv      7423 Nov 28 15:19 tm_disc_balance_20131127.psv.gpg
 
 This file is ready to share with the exteral interface who can decryp the files with its own provate keys.
