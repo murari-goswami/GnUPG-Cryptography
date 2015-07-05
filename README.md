@@ -1,10 +1,10 @@
-The project will install GnUPG software in a System and the Application will encrypt the files to facilitate end to end file security while sharing them with some third party application through public network.
-In order to acheive tha PGP open source software is used. This can be acheived by using the GNU PGP cryptography package.
-The GNU Privacy Guard (GnuPG) is a complete implementation of the OpenPGP Internet standard as described by RFC4880 (formerly RFC2440). It is used for digital encryption and signing of data and mainly useful for data sharing through unsecure public netwotk and data storage.
-This encryption utility is build between HP Alpha and Windows 2010 Server.
-The most stable version of Open PGP released for HP Tru 64 is 1.4 1.4.10. 
-However the Interfacewith Win 2010 Server and the most stable release is 2.0.
+The project will install GnUPG software in a System and custome application were written those will encrypt the files to facilitate end to end file security while sharing them with third party application through public network.
+In order to achieve the PGP open source software packages are used. 
+The GNU Privacy Guard (GnuPG) is a complete implementation of the OpenPGP Internet standard as described by RFC4880 (formerly RFC2440). It is used for digital encryption and signing of data and mainly useful for data sharing through un secure public network and data storage.
+This encryption application utility is build between HP Alpha and Windows 2010 Server. The most stable version of Open PGP released for HP Tru 64 is 1.4 1.4.10. However the Interfacewith Win 2010 Server and the most stable release is 2.0.
+
 This seems tricky as the two versions of Software in two different OS and no valid case study and proof of implementation. This would be the first of its kind of proof of solution towards the implemantation of the GnuPG encryption software.
+
 The first step would be to generate the keys and use them to encrypt files in all Batch Scripts.
 The encryption key software runs with the below logic.
   1. With two system in hand system A and System B. For sending the encrypted file from system A to B, the outgoing file from       system A needs to be encrypted with public key of sysem B.
